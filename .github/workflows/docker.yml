@@ -8,9 +8,9 @@ on:
 
 env:
   # Using existing Docker environment variables
-  DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-  DOCKERHUB_REPO: ${{ secrets.DOCKER_REPO }}
-  DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  DOCKERHUB_USERNAME: ${{ DOCKER.DOCKER_USERNAME }}
+  DOCKERHUB_REPO: ${{ DOCKER.DOCKER_REPO }}
+  DOCKERHUB_PASSWORD: ${{ DOCKER.DOCKER_PASSWORD }}
 
 jobs:
   build:
