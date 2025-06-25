@@ -7,12 +7,10 @@ on:
     branches: [ main ]
 
 env:
-  # Change this to your Docker Hub username
-  DOCKERHUB_USERNAME: ${{ DOCKER.DOCKER_USERNAME }}
-  # Change this to your Docker Hub repository name
-  DOCKERHUB_REPO: ${{ DOCKER.DOCKER_REPO }}
-  # Change this to your Docker Hub password
-  DOCKERHUB_PASSWORD: ${{ DOCKER.DOCKER_PASSWORD }}
+  # Using existing Docker environment variables
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKERHUB_REPO: ${{ secrets.DOCKER_REPO }}
+  DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:
   build:
